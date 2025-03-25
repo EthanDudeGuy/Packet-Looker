@@ -45,7 +45,7 @@ current options supported:
 
     >> diff
         -displays diff from slice of collection [start:end]
-        -green packets are identical across the sliced packets, red are different
+        -green bits are identical across the sliced packets, red are different
         -resets colorings when done if you tell it to
     
     >> color_bit

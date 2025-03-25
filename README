@@ -37,6 +37,7 @@ current options supported:
          of this one (I think?)
         -When file has done its job it will tell you what it did
         -you can update your collection by using file again at any time
+	-there is an example packet text file in the github
 
     >> display
         -display will immediately show you the packets in your collection

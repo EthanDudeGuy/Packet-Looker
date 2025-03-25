@@ -1,0 +1,25 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment (if using one)
+venv/
+env/
+
+# Ignore dependency files (if using Poetry)
+poetry.lock
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore compiled executables (if using PyInstaller)
+dist/
+build/
+*.spec
+
+# Ignore log files and temporary files
+*.log
+*.tmp
+

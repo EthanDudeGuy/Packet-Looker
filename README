@@ -1,0 +1,80 @@
+Hello and welcome to packet looker 2.0
+designed and implemented by Ethan Emery
+
+description:
+    During a project I required the ability to line up
+    and compare binary data packets in the command line
+    to do some rudimentary analysis.
+    I made a hacky command line took that lined up the packets and it was enough for my purposes,
+    but I thought it might be nice to make a tool that would allow this to be done more easily
+
+current features/how to use:
+    TLDR: type: "python3 packet_looker.py"
+
+    packets are read in as a .txt file separated by commas. Packets
+    can occupy multiple lines and include spaces or other whitespace characters (these will be removed in processing). 
+
+            IMPORTANT NOTE: The last packet in the file 
+                            will not be read if it does not end 
+                            with a comma
+
+            Example file contents:
+                tmp.txt:
+                        1111 0000 1111 0000 11111111,
+                        0000000000000000 1111111111111111,
+                        11111
+                        1110000000011111111,
+
+                will give the following packet objects to work with:
+                11110000 11110000 11111111
+                00000000 00000000 11111111 11111111
+                11111111 00000000 11111111
+
+current options supported:
+    >> file
+        -file will ask you for a file path to the above text file
+         the text file should be in this directory or a subdirectory
+         of this one (I think?)
+        -When file has done its job it will tell you what it did
+        -you can update your collection by using file again at any time
+
+    >> display
+        -display will immediately show you the packets in your collection
+        according to the display options you chose in 'file' (spaced/stacked and size)
+
+    >> diff
+        -displays diff from slice of collection [start:end]
+        -green packets are identical across the sliced packets, red are different
+        -resets colorings when done if you tell it to
+    
+    >> color_bit
+        -colors all bits at a certain index across packets from specific slice 
+        -may crap out if you do it weird
+        -start:end will be affected, position indicates the index
+    
+    >> color_byte
+        -color bit but you index a byte directly
+
+    >> reset
+        -resets any coloring you may have done
+
+    >> exit
+        -exits
+    
+    TIPS:
+        -keep screen wide so packets line up correctly
+
+        -if packets are longer than screen width use 'stacked'
+         when reading in packets. It's ugly but it fits on the screen
+
+        -Look at the <stuff in here> when the program asks you for an input
+         those are your options
+        
+        -if you pass something that is not an option either you will be informed of this
+         or everything will break
+        
+        -Use 'diff' with wipe set to 'no' to start and then use color_bit and color_byte
+         to further anotate your file. color_bit allows for arbitrarily indexed ranges to be colored.
+         color_byte colors a whole byte at a position (index of that byte)
+
+    

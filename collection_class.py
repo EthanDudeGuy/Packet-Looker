@@ -10,7 +10,7 @@ reset_color = "\033[0m"
 
 class Collection:
 
-    def __init__(self, file_path, size, style, mode = "r"):
+    def __init__(self, file_path, size = "byte", style = "spaced", mode = "r"):
         self.file_path = file_path
         self.size = size
         self.style = style

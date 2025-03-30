@@ -1,6 +1,7 @@
 from packet_class import Packet
 from collection_class import Collection
 
+
 red_color = "\033[31m"
 green_color = "\033[32m"
 yellow_color = "\033[33m"

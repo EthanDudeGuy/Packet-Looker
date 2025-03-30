@@ -1,11 +1,19 @@
 Hello and welcome to packet looker 2.0
 designed and implemented by Ethan Emery
 
+THERE ARE TWO TOOLS HERE:
+    -packet_looker.py is an interactive little thing to mess with and color packets
+    -diff_bits does the same but is just the diff command, you pass it args like this: 
+        python3 diff_bits.py comma_separated_packets.txt [bit,byte,word,32,64 (optional) ] [spaced,stacked (optional)] 
+        -"comma_separated_packets.txt" is your text file as described below
+        -bits that are the same across all packets will be green and otherwise red, to get more control 
+            over which packets are being compared and coloring options use the interactive "packet_looker.py"
+
 description:
     During a project I required the ability to line up
-    and compare binary data packets in the command line
+    and compare binary packets in the command line
     to do some rudimentary analysis.
-    I made a hacky command line took that lined up the packets and it was enough for my purposes,
+    I made a hacky command line tool that lined up the packets and it was enough for my purposes,
     but I thought it might be nice to make a tool that would allow this to be done more easily
 
 current features/how to use:

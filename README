@@ -5,6 +5,11 @@ probably could be more concise and definately
 could be alot more efficient but for this purpose
 who cares)
 
+note: Packets in my case came from urh (universal radio hacker) so they are
+ascii strings of '1's and '0's, maybe i'll support
+hex or other representations at some point
+but we will see.
+
 THERE ARE TWO TOOLS HERE:
     -packet_looker.py is an interactive little thing to mess with and color packets
     -diff_bits does the same but is just the diff command, you pass it args like this: 

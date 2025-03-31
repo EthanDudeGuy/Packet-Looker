@@ -1,5 +1,9 @@
 Hello and welcome to packet looker 2.0
 designed and implemented by Ethan Emery
+(currently lacking proper error handling and
+probably could be more concise and definately
+could be alot more efficient but for this purpose
+who cares)
 
 THERE ARE TWO TOOLS HERE:
     -packet_looker.py is an interactive little thing to mess with and color packets
